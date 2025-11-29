@@ -71,8 +71,8 @@ public class ValidationItemControllerV1 {
             model.addAttribute("errors", errors);
             return "validation/v1/addForm";
         }
-        
-        
+
+
         Item savedItem = itemRepository.save(item);
         redirectAttributes.addAttribute("itemId", savedItem.getId());
         redirectAttributes.addAttribute("status", true);
